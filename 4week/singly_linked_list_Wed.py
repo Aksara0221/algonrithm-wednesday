@@ -8,6 +8,20 @@
 4. popNext(): 현재 노드의 다음 노드를 리스트에서 제거하고, 그 노드를 반환
 """
 # 단순연결구조를 위한 Node 클래스
+class Node:
+    def __init__(self,elem, link=None):
+        self.dara = elem # 데이터 필드
+        self.link = link # 다음 노드를 가리키는 주소값을 저장(링크) 필드
+
+    # 노드 기반 삽입 연산
+    def append(self, new) :    # 현재 노드(self) 뒤에 주어진 노드(node)를 연결 dustks
+        if new is not None:
+            new.link = self.link    # new의 다음 노드는 현재 노드(self)의 다음 노드로 수정
+            self.link = new         # 현재 노드(self)의 다음 노드를 new로 수정
+
+    # 노드 기반 삭제 연산
+    
+        
 
 # 코드 3.2: 단순연결리스트 클래스
 """
@@ -80,5 +94,4 @@ if __name__ == "__main__" :
     # test_code_3_3()  
     # test()
     # quiz_2()
-
 
